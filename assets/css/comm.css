@@ -280,30 +280,74 @@ legend {
   content: "";
 }
 
-.card {
-  position: relative;
-  height: 300px;
-  border: 1px solid #fff;
-  background-color: #ff5722;
-}
-.card span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.card2 {
-  height: 300px;
-  border: 1px solid #000;
-  background-color: #ffddee;
+#header {
+  height: 70px;
 }
 
-.slide li {
-  height: 300px;
+#main {
+  flex-grow: 1;
 }
-.slide li a {
-  display: block;
+
+#footer {
+  height: 70px;
+}
+
+#header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   height: 100%;
-  color: #f43636;
+}
+#header .col-right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+#header .util ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+#header .util .link-g {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+#header .util .link-g::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 40px;
+  height: 40px;
+}
+#header .util .link-lang::before {
+  content: "\f0ac";
+}
+#header .util .link-search::before {
+  content: "\f002";
+}
+#header .util .link-mypage::before {
+  content: "\f007";
+}
+
+.slide-intro swiper-slide {
+  height: 300px;
+  background: #f43636;
+}
+
+.slide-best swiper-slide {
+  height: 300px;
+  background: #e0e0e0;
 }/*# sourceMappingURL=comm.css.map */

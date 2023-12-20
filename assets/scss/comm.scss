@@ -2,28 +2,81 @@
 // @import 뒤로 갈수록 우선순위가 높아짐 >> 위의 import에서는 reset의 우선순위가 가장 높음
 // 하지만 content 밑에 @import를 넣어주면 밑에 있는 import의 우선순위가 더 높아짐
 // reset을 그대로 적용하고 싶지 않을 수도 있으므로 각 페이지마다 scss를 만들어서 우선순위를 높여주면 됨 >> content 밑에 import 해줌
-.card {
-  position: relative;
-  @include card($secondary, $white);
-  span {
-    @include posXY;
+
+// btn style
+
+// card style
+
+// list style
+
+// layout
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#header {
+  height: $hd-height;
+}
+#main {
+  flex-grow: 1;
+  // min-height: cal(100vh - $hd-height - $ft-height);
+  // main에 min-height를 줌으로써 항상 풋터가 바닥에 붙어있게 설정
+}
+
+#footer {
+  height: $ft-height;
+}
+
+// header (detail)
+#header {
+  .inner {
+    // @include flexSpaceBetween;
+    @include flex(space-between);
+    height: 100%;
   }
-}
+  .col-right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .gnb-wrap {
+  }
 
-.card2 {
-  @include card(#ffddee, $black);
-}
-
-.slide {
-  li {
-    height: 300px;
-    a {
-      display: block;
+  .util {
+    ul {
+      @include flexSpaceBetween;
       height: 100%;
-      color: $primary;
+    }
+    .link-g {
+      @include flexSpaceBetween;
+      height: $hd-height;
+      &::before {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        @include flex;
+        @include icon;
+      }
+    }
+    .link-lang {
+      &::before {
+        content: "\f0ac";
+      }
+    }
+    .link-search {
+      &::before {
+        content: "\f002";
+      }
+    }
+    .link-mypage {
+      &::before {
+        content: "\f007";
+      }
     }
   }
 }
+
+// footer
 
 @import "main", "sub1", "sub2";
 
