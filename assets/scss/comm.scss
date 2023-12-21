@@ -126,7 +126,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3px;
+  cursor: pointer;
   .bar {
     width: 20px;
     height: 2px;
