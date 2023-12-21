@@ -74,6 +74,7 @@
           <div class="col-right">
             <div class="gnb-wrap">
               <input
+                checked
                 type="checkbox"
                 name="gnbNav"
                 id="gnbNav"
@@ -81,11 +82,11 @@
               />
               <!-- script 표기법인 카멜표기로 사용 >> 동적처리가 가능해야 하기 때문-->
               <!-- css 표기법과 구분해서 사용해주는 것이 좋음! -->
-              <label for="gnbNav">
+              <label for="gnbNav" class="label-burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
                 <div class="blind">전체 메뉴 보기</div>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
               </label>
               <nav id="gnb">전체 메뉴</nav>
             </div>
@@ -109,10 +110,6 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="gnb-wrap">
-          <a href="#">gnb</a>
-          <div class="depth1"></div>
         </div>
       </header>
       <main id="main">
