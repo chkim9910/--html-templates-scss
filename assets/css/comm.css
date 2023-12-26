@@ -284,8 +284,15 @@ legend {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
+@media screen and (min-width: 1280px) {
+  .wrap {
+    max-width: none;
+  }
+}
 #header {
   height: 70px;
 }
@@ -379,7 +386,9 @@ legend {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3px;
+  cursor: pointer;
 }
 .label-burger .bar {
   width: 20px;
